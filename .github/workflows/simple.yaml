@@ -17,5 +17,15 @@ jobs:
           import platform
           print(platform.processor())
         shell: python 
-    
+  run-on-windows-runner: 
+    runs-on: windows-latest
+    steps:
+      - name: Output Directory in in defualt shell, powershell
+        run: Get-Location
+      - name: Output the directory from bash
+        run: pwd
+        shell: bash 
+
+
+
   
